@@ -3,14 +3,15 @@ import thunk from 'redux-thunk';
 
 import { authReducer } from '../reducers/authReducer';
 import { uiReducer } from '../reducers/uiReducer';
-import { notesReducer } from '../reducers/notesReducer';
+import { taskReducer } from '../reducers/taskReducer';
+
 
 const composeEnhancers = (typeof window !== 'undefined' && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) || compose;
 
 const reducers = combineReducers({
     auth: authReducer,
     ui: uiReducer,
-    notes: notesReducer
+    tasks: taskReducer
 });
 
 
